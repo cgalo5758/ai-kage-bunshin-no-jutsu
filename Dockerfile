@@ -3,14 +3,13 @@
 
 FROM python:3.12-bookworm
 
-# Install langchain
-RUN pip install langchain
-
-# Install jupyterlab
-RUN pip install jupyterlab
-
-# Install openai
-RUN pip install openai
+# Install the required packages
+RUN pip install \
+langchain \
+jupyterlab \
+openai \
+docarray \
+tiktoken 
 
 # Make a directory for the application
 RUN mkdir /app

@@ -8,10 +8,10 @@ Build the docker image from the Dockerfile
 docker build -t taju-kage-bunshin .
 ```
 
-Run the docker image, exposing port 5000, and mounting the current directory as a volume.
+Run the docker image, exposing port 8192, and mounting the current directory as a volume.
 
 ```
-docker run -d \
+docker run \
 --env-file .env \
 -p 8192:8192 \
 --mount type=bind,source="$(pwd)/notebooks",target=/app \
